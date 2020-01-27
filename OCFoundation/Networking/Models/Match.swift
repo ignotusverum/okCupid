@@ -27,3 +27,7 @@ public struct Match:
         case location
     }
 }
+
+extension Match: Equatable {
+    public static func == (lhs: Match, rhs: Match) -> Bool { lhs.userId == rhs.userId }
+}

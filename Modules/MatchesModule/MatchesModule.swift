@@ -38,6 +38,9 @@ public class MatchesModule: ModuleProtocol, EventsProducer {
     }
     
     public func unmanagedRootViewController() -> UIViewController {
-        return UIViewController()
+        let viewModel = MatchesViewModel(events: _events)
+        let view = MatchesViewController(with: viewModel)
+        
+        return view
     }
 }

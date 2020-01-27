@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4987BE2BF38D966847A12031 /* Pods_Modules_MatchesModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6700C4C831AEDDF63ADE073E /* Pods_Modules_MatchesModule.framework */; };
+		5A026A0E23DFA67E00F58E43 /* OCUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A026A0C23DFA67D00F58E43 /* OCUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A026A1123DFA67E00F58E43 /* OCUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A026A0A23DFA67D00F58E43 /* OCUIKit.framework */; };
+		5A026A1223DFA67E00F58E43 /* OCUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A026A0A23DFA67D00F58E43 /* OCUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A026A1923DFA6BE00F58E43 /* TitleViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A026A1823DFA6BE00F58E43 /* TitleViewProtocol.swift */; };
+		5A026A1B23DFA6D600F58E43 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A026A1A23DFA6D600F58E43 /* TitleCell.swift */; };
+		5A026A1D23DFA6FD00F58E43 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A026A1C23DFA6FD00F58E43 /* UICollectionView.swift */; };
+		5A026A2023DFA90800F58E43 /* TabbarControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A026A1F23DFA90800F58E43 /* TabbarControllerRouter.swift */; };
 		5A3A916723DF9CB9004A6AE1 /* WeakifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3A916623DF9CB9004A6AE1 /* WeakifyTests.swift */; };
 		5A3A916C23DF9D2D004A6AE1 /* ModelsDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3A916B23DF9D2D004A6AE1 /* ModelsDecodingTests.swift */; };
 		5A3A917023DF9D89004A6AE1 /* matches.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A3A916F23DF9D89004A6AE1 /* matches.json */; };
@@ -58,6 +65,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5A026A0F23DFA67E00F58E43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ACAC31023DF711200731AAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A026A0923DFA67D00F58E43;
+			remoteInfo = OCUIKit;
+		};
 		5A3A916123DF9C7C004A6AE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5ACAC31023DF711200731AAB /* Project object */;
@@ -102,6 +116,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5A026A1223DFA67E00F58E43 /* OCUIKit.framework in Embed Frameworks */,
 				5A71B80F23DF923600AA59B1 /* MatchesModule.framework in Embed Frameworks */,
 				5A71B81223DF923700AA59B1 /* OCFoundation.framework in Embed Frameworks */,
 			);
@@ -114,6 +129,13 @@
 		31CA83C618A63BC6F40821A5 /* Pods_OkCupid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkCupid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE6F1B3E196668620A976F3 /* Pods-Modules-OCFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-OCFoundation.debug.xcconfig"; path = "Target Support Files/Pods-Modules-OCFoundation/Pods-Modules-OCFoundation.debug.xcconfig"; sourceTree = "<group>"; };
 		3DF8BBFBDAC2A7C099EDDB13 /* Pods-Modules-MatchesModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-MatchesModule.release.xcconfig"; path = "Target Support Files/Pods-Modules-MatchesModule/Pods-Modules-MatchesModule.release.xcconfig"; sourceTree = "<group>"; };
+		5A026A0A23DFA67D00F58E43 /* OCUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OCUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A026A0C23DFA67D00F58E43 /* OCUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCUIKit.h; sourceTree = "<group>"; };
+		5A026A0D23DFA67E00F58E43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A026A1823DFA6BE00F58E43 /* TitleViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewProtocol.swift; sourceTree = "<group>"; };
+		5A026A1A23DFA6D600F58E43 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		5A026A1C23DFA6FD00F58E43 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		5A026A1F23DFA90800F58E43 /* TabbarControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarControllerRouter.swift; sourceTree = "<group>"; };
 		5A3A915C23DF9C7C004A6AE1 /* OCFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3A916023DF9C7C004A6AE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A3A916623DF9CB9004A6AE1 /* WeakifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakifyTests.swift; sourceTree = "<group>"; };
@@ -174,6 +196,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5A026A0723DFA67D00F58E43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A3A915923DF9C7C004A6AE1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A71B81123DF923700AA59B1 /* OCFoundation.framework in Frameworks */,
+				5A026A1123DFA67E00F58E43 /* OCUIKit.framework in Frameworks */,
 				5A71B80E23DF923600AA59B1 /* MatchesModule.framework in Frameworks */,
 				DB0ED5DAC8DB8E0DD53BCE8F /* Pods_OkCupid.framework in Frameworks */,
 			);
@@ -220,6 +250,41 @@
 				61CAA089EB494B2925CA041D /* Pods_OCFoundationTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A026A0B23DFA67D00F58E43 /* OCUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				5A026A1623DFA69900F58E43 /* UICollectionViewCells */,
+				5A026A0C23DFA67D00F58E43 /* OCUIKit.h */,
+				5A026A0D23DFA67E00F58E43 /* Info.plist */,
+			);
+			path = OCUIKit;
+			sourceTree = "<group>";
+		};
+		5A026A1623DFA69900F58E43 /* UICollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				5A026A1723DFA6B300F58E43 /* Protocols */,
+				5A026A1A23DFA6D600F58E43 /* TitleCell.swift */,
+			);
+			path = UICollectionViewCells;
+			sourceTree = "<group>";
+		};
+		5A026A1723DFA6B300F58E43 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5A026A1823DFA6BE00F58E43 /* TitleViewProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5A026A1E23DFA8FF00F58E43 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5A026A1F23DFA90800F58E43 /* TabbarControllerRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		5A3A915D23DF9C7C004A6AE1 /* OCFoundationTests */ = {
@@ -263,6 +328,7 @@
 				5ACAC32F23DF759A00731AAB /* Modules */,
 				5ACAC31A23DF711200731AAB /* OkCupid */,
 				5ACAC33623DF770600731AAB /* OCFoundation */,
+				5A026A0B23DFA67D00F58E43 /* OCUIKit */,
 				5ACAC31923DF711200731AAB /* Products */,
 				861FFB5D7D7C62F932DDA40B /* Pods */,
 				3111860C1D7614D399D02DBE /* Frameworks */,
@@ -276,6 +342,7 @@
 				5ACAC33523DF770600731AAB /* OCFoundation.framework */,
 				5ACAC37923DF7F9800731AAB /* MatchesModule.framework */,
 				5A3A915C23DF9C7C004A6AE1 /* OCFoundationTests.xctest */,
+				5A026A0A23DFA67D00F58E43 /* OCUIKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -283,6 +350,7 @@
 		5ACAC31A23DF711200731AAB /* OkCupid */ = {
 			isa = PBXGroup;
 			children = (
+				5A026A1E23DFA8FF00F58E43 /* Router */,
 				5ACAC39123DF825C00731AAB /* Routes */,
 				5ACAC38723DF80D100731AAB /* EventListeners */,
 				5ACAC37123DF7EE200731AAB /* Networking */,
@@ -375,6 +443,7 @@
 				5ACAC3A523DF838D00731AAB /* Rx */,
 				5ACAC3A023DF836500731AAB /* Functional */,
 				5ACAC35E23DF7B4E00731AAB /* Decodable.swift */,
+				5A026A1C23DFA6FD00F58E43 /* UICollectionView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -496,6 +565,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		5A026A0523DFA67D00F58E43 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A026A0E23DFA67E00F58E43 /* OCUIKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5ACAC33023DF770600731AAB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -515,6 +592,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5A026A0923DFA67D00F58E43 /* OCUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A026A1523DFA67E00F58E43 /* Build configuration list for PBXNativeTarget "OCUIKit" */;
+			buildPhases = (
+				5A026A0523DFA67D00F58E43 /* Headers */,
+				5A026A0623DFA67D00F58E43 /* Sources */,
+				5A026A0723DFA67D00F58E43 /* Frameworks */,
+				5A026A0823DFA67D00F58E43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OCUIKit;
+			productName = OCUIKit;
+			productReference = 5A026A0A23DFA67D00F58E43 /* OCUIKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		5A3A915B23DF9C7C004A6AE1 /* OCFoundationTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A3A916323DF9C7C004A6AE1 /* Build configuration list for PBXNativeTarget "OCFoundationTests" */;
@@ -552,6 +647,7 @@
 			dependencies = (
 				5ACAC33B23DF770600731AAB /* PBXTargetDependency */,
 				5ACAC37F23DF7F9800731AAB /* PBXTargetDependency */,
+				5A026A1023DFA67E00F58E43 /* PBXTargetDependency */,
 			);
 			name = OkCupid;
 			productName = OkCubid;
@@ -607,6 +703,10 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Vlad Z.";
 				TargetAttributes = {
+					5A026A0923DFA67D00F58E43 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
 					5A3A915B23DF9C7C004A6AE1 = {
 						CreatedOnToolsVersion = 11.3.1;
 						LastSwiftMigration = 1130;
@@ -639,6 +739,7 @@
 			projectRoot = "";
 			targets = (
 				5ACAC31723DF711200731AAB /* OkCupid */,
+				5A026A0923DFA67D00F58E43 /* OCUIKit */,
 				5ACAC33423DF770600731AAB /* OCFoundation */,
 				5ACAC37823DF7F9800731AAB /* MatchesModule */,
 				5A3A915B23DF9C7C004A6AE1 /* OCFoundationTests */,
@@ -647,6 +748,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5A026A0823DFA67D00F58E43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A3A915A23DF9C7C004A6AE1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -806,6 +914,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5A026A0623DFA67D00F58E43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A026A1B23DFA6D600F58E43 /* TitleCell.swift in Sources */,
+				5A026A1923DFA6BE00F58E43 /* TitleViewProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A3A915823DF9C7C004A6AE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -826,6 +943,7 @@
 				5ACAC37323DF7EEF00731AAB /* MatchesAdapter+Config.swift in Sources */,
 				5ACAC32023DF711200731AAB /* ViewController.swift in Sources */,
 				5ACAC38B23DF80F500731AAB /* AppDelegateRoutingEventsListener.swift in Sources */,
+				5A026A2023DFA90800F58E43 /* TabbarControllerRouter.swift in Sources */,
 				5ACAC31C23DF711200731AAB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -843,6 +961,7 @@
 				5ACAC36E23DF7E5200731AAB /* MatchesAdapter.swift in Sources */,
 				5ACAC35C23DF7A9400731AAB /* Photo.swift in Sources */,
 				5ACAC35423DF792F00731AAB /* LocationProtocol.swift in Sources */,
+				5A026A1D23DFA6FD00F58E43 /* UICollectionView.swift in Sources */,
 				5ACAC35223DF78EB00731AAB /* MatchProtocol.swift in Sources */,
 				5A3A917223DFA23E004A6AE1 /* MatchesPage.swift in Sources */,
 				5ACAC34B23DF777B00731AAB /* Request.swift in Sources */,
@@ -872,6 +991,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5A026A1023DFA67E00F58E43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A026A0923DFA67D00F58E43 /* OCUIKit */;
+			targetProxy = 5A026A0F23DFA67E00F58E43 /* PBXContainerItemProxy */;
+		};
 		5A3A916223DF9C7C004A6AE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5ACAC31723DF711200731AAB /* OkCupid */;
@@ -911,6 +1035,65 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5A026A1323DFA67E00F58E43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9CHSEMW6LK;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OCUIKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vladz.OCUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5A026A1423DFA67E00F58E43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9CHSEMW6LK;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OCUIKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vladz.OCUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		5A3A916423DF9C7C004A6AE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D523D5A2647DF77279A94F28 /* Pods-OCFoundationTests.debug.xcconfig */;
@@ -920,6 +1103,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CHSEMW6LK;
 				INFOPLIST_FILE = OCFoundation/OCFoundationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -943,6 +1127,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CHSEMW6LK;
 				INFOPLIST_FILE = OCFoundation/OCFoundationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1074,6 +1259,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C68B47E132BDC13EE398E245 /* Pods-OkCupid.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CHSEMW6LK;
@@ -1119,6 +1305,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 759C7E67349B5F241D00E30D /* Pods-OkCupid.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CHSEMW6LK;
@@ -1287,6 +1474,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5A026A1523DFA67E00F58E43 /* Build configuration list for PBXNativeTarget "OCUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A026A1323DFA67E00F58E43 /* Debug */,
+				5A026A1423DFA67E00F58E43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5A3A916323DF9C7C004A6AE1 /* Build configuration list for PBXNativeTarget "OCFoundationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

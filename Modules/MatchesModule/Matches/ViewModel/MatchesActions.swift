@@ -6,4 +6,20 @@
 //  Copyright © 2020 Vlad Z. All rights reserved.
 //
 
-import Foundation
+import MERLin
+import OCFoundation
+
+enum MatchesUIAction: EventProtocol {
+    case reload
+    case matchSelected(Match)
+}
+
+enum MatchesModelAction: EventProtocol {
+    case loaded(_ sections: MatchesPage)
+}
+
+enum MatchesActions: EventProtocol {
+    case ui(MatchesUIAction)
+    case model(MatchesModelAction)
+}
+
