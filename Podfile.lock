@@ -20,7 +20,7 @@ PODS:
   - RxSwift (5.0.1)
 
 DEPENDENCIES:
-  - MERLin
+  - MERLin (from `https://github.com/gringoireDM/MERLin.git`, branch `master`)
   - RxDataSources
 
 SPEC REPOS:
@@ -28,12 +28,21 @@ SPEC REPOS:
     - Differentiator
     - EnumKit
     - LNZWeakCollection
-    - MERLin
     - RxCocoa
     - RxDataSources
     - RxEnumKit
     - RxRelay
     - RxSwift
+
+EXTERNAL SOURCES:
+  MERLin:
+    :branch: master
+    :git: https://github.com/gringoireDM/MERLin.git
+
+CHECKOUT OPTIONS:
+  MERLin:
+    :commit: 133c7b2d95892bd3e60fa9370c861ed96f3869e3
+    :git: https://github.com/gringoireDM/MERLin.git
 
 SPEC CHECKSUMS:
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
@@ -46,6 +55,6 @@ SPEC CHECKSUMS:
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
 
-PODFILE CHECKSUM: 2e111d2d1e8d976aab37fc3686a5a413ed5c28b9
+PODFILE CHECKSUM: da9c33a2e25ceea9be643e65bce89d20a33c731d
 
 COCOAPODS: 1.8.4

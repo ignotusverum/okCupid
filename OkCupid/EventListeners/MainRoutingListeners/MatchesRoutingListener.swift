@@ -16,7 +16,6 @@ class MatchesRoutingListener: ModuleEventsListener {
     
     func listenEvents(from module: AnyEventsProducerModule,
                       events: Observable<MatchesEvents>) -> Bool {
-        
         events.capture(case: MatchesEvents.matchSelected)
             .toRoutableObservable()
             .subscribe(onNext: { match in

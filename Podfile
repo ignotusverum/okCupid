@@ -4,8 +4,8 @@ use_modular_headers!
 inhibit_all_warnings! # supresses pods project warnings
 
 def common
-  pod 'MERLin'
   pod 'RxDataSources'
+  pod 'MERLin', :git => 'https://github.com/gringoireDM/MERLin.git', :branch => 'master'
 end
 
 target 'OkCupid' do
@@ -18,3 +18,4 @@ abstract_target 'Modules' do
   target 'OCFoundation'
   target 'MatchesModule'
 end
+
