@@ -31,8 +31,18 @@
 		5ACAC36E23DF7E5200731AAB /* MatchesAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAC36D23DF7E5200731AAB /* MatchesAdapter.swift */; };
 		5ACAC37023DF7E7100731AAB /* NetworkingAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAC36F23DF7E7100731AAB /* NetworkingAdapter.swift */; };
 		5ACAC37323DF7EEF00731AAB /* MatchesAdapter+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAC37223DF7EEF00731AAB /* MatchesAdapter+Config.swift */; };
+		5ACAC37D23DF7F9800731AAB /* MatchesModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 5ACAC37B23DF7F9800731AAB /* MatchesModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5ACAC38023DF7F9800731AAB /* MatchesModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACAC37923DF7F9800731AAB /* MatchesModule.framework */; };
+		5ACAC38123DF7F9800731AAB /* MatchesModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACAC37923DF7F9800731AAB /* MatchesModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5ACAC38623DF801700731AAB /* MatchesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAC38523DF801700731AAB /* MatchesModule.swift */; };
+		5ACAC38923DF80E000731AAB /* MainRoutingListenerAggregator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAC38823DF80E000731AAB /* MainRoutingListenerAggregator.swift */; };
+		5ACAC38B23DF80F500731AAB /* AppDelegateRoutingEventsListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAC38A23DF80F500731AAB /* AppDelegateRoutingEventsListener.swift */; };
+		5ACAC38D23DF810E00731AAB /* AppDelegateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAC38C23DF810E00731AAB /* AppDelegateEvent.swift */; };
+		5ACAC39023DF815100731AAB /* MatchesRoutingListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAC38F23DF815100731AAB /* MatchesRoutingListener.swift */; };
+		5ACAC39323DF826300731AAB /* MatchesSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAC39223DF826300731AAB /* MatchesSetup.swift */; };
 		8D6F8E6BC0B38F5610645B57 /* Pods_Modules_OCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B2BD1B5E7985C1517302D8 /* Pods_Modules_OCFoundation.framework */; };
 		C1CF9DE9C8D65FECEC644EAE /* Pods_OkCupid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322500D77F7C255FE10E4C0B /* Pods_OkCupid.framework */; };
+		E2AD9F8B2D3B4F835BD220BF /* Pods_Modules_MatchesModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C8224466169E3DB2D6ED85 /* Pods_Modules_MatchesModule.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +53,13 @@
 			remoteGlobalIDString = 5ACAC33423DF770600731AAB;
 			remoteInfo = OCFoundation;
 		};
+		5ACAC37E23DF7F9800731AAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ACAC31023DF711200731AAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ACAC37823DF7F9800731AAB;
+			remoteInfo = MatchesModule;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +69,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5ACAC38123DF7F9800731AAB /* MatchesModule.framework in Embed Frameworks */,
 				5ACAC33D23DF770600731AAB /* OCFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -65,6 +83,7 @@
 		322500D77F7C255FE10E4C0B /* Pods_OkCupid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkCupid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BCC413D9C7A7232861021C /* Pods-OkCubid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCubid.release.xcconfig"; path = "Target Support Files/Pods-OkCubid/Pods-OkCubid.release.xcconfig"; sourceTree = "<group>"; };
 		4BC20CE9130B04F06160D26B /* Pods-OkCupid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCupid.debug.xcconfig"; path = "Target Support Files/Pods-OkCupid/Pods-OkCupid.debug.xcconfig"; sourceTree = "<group>"; };
+		56C8224466169E3DB2D6ED85 /* Pods_Modules_MatchesModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_MatchesModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACAC31823DF711200731AAB /* OkCupid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OkCupid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACAC31B23DF711200731AAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ACAC31F23DF711200731AAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +110,17 @@
 		5ACAC36D23DF7E5200731AAB /* MatchesAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesAdapter.swift; sourceTree = "<group>"; };
 		5ACAC36F23DF7E7100731AAB /* NetworkingAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAdapter.swift; sourceTree = "<group>"; };
 		5ACAC37223DF7EEF00731AAB /* MatchesAdapter+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchesAdapter+Config.swift"; sourceTree = "<group>"; };
+		5ACAC37923DF7F9800731AAB /* MatchesModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MatchesModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ACAC37B23DF7F9800731AAB /* MatchesModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatchesModule.h; sourceTree = "<group>"; };
+		5ACAC37C23DF7F9800731AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ACAC38523DF801700731AAB /* MatchesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesModule.swift; sourceTree = "<group>"; };
+		5ACAC38823DF80E000731AAB /* MainRoutingListenerAggregator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRoutingListenerAggregator.swift; sourceTree = "<group>"; };
+		5ACAC38A23DF80F500731AAB /* AppDelegateRoutingEventsListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateRoutingEventsListener.swift; sourceTree = "<group>"; };
+		5ACAC38C23DF810E00731AAB /* AppDelegateEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateEvent.swift; sourceTree = "<group>"; };
+		5ACAC38F23DF815100731AAB /* MatchesRoutingListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesRoutingListener.swift; sourceTree = "<group>"; };
+		5ACAC39223DF826300731AAB /* MatchesSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesSetup.swift; sourceTree = "<group>"; };
+		742B8A836F7AB80F7BACEF44 /* Pods-Modules-MatchesModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-MatchesModule.release.xcconfig"; path = "Target Support Files/Pods-Modules-MatchesModule/Pods-Modules-MatchesModule.release.xcconfig"; sourceTree = "<group>"; };
+		874EDBB1CBEFB64E2FF062FE /* Pods-Modules-MatchesModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-MatchesModule.debug.xcconfig"; path = "Target Support Files/Pods-Modules-MatchesModule/Pods-Modules-MatchesModule.debug.xcconfig"; sourceTree = "<group>"; };
 		8A3AB27029D407DAF47E835A /* Pods-Modules-OCFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-OCFoundation.debug.xcconfig"; path = "Target Support Files/Pods-Modules-OCFoundation/Pods-Modules-OCFoundation.debug.xcconfig"; sourceTree = "<group>"; };
 		B4E49E2AF0079AA68992CB5B /* Pods-OkCupid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCupid.release.xcconfig"; path = "Target Support Files/Pods-OkCupid/Pods-OkCupid.release.xcconfig"; sourceTree = "<group>"; };
 		D8B2BD1B5E7985C1517302D8 /* Pods_Modules_OCFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_OCFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ACAC38023DF7F9800731AAB /* MatchesModule.framework in Frameworks */,
 				5ACAC33C23DF770600731AAB /* OCFoundation.framework in Frameworks */,
 				C1CF9DE9C8D65FECEC644EAE /* Pods_OkCupid.framework in Frameworks */,
 			);
@@ -114,6 +145,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5ACAC37623DF7F9800731AAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2AD9F8B2D3B4F835BD220BF /* Pods_Modules_MatchesModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -122,6 +161,7 @@
 			children = (
 				D8B2BD1B5E7985C1517302D8 /* Pods_Modules_OCFoundation.framework */,
 				322500D77F7C255FE10E4C0B /* Pods_OkCupid.framework */,
+				56C8224466169E3DB2D6ED85 /* Pods_Modules_MatchesModule.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,6 +183,7 @@
 			children = (
 				5ACAC31823DF711200731AAB /* OkCupid.app */,
 				5ACAC33523DF770600731AAB /* OCFoundation.framework */,
+				5ACAC37923DF7F9800731AAB /* MatchesModule.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,12 +191,15 @@
 		5ACAC31A23DF711200731AAB /* OkCupid */ = {
 			isa = PBXGroup;
 			children = (
+				5ACAC39123DF825C00731AAB /* Routes */,
+				5ACAC38723DF80D100731AAB /* EventListeners */,
 				5ACAC37123DF7EE200731AAB /* Networking */,
 				5ACAC31B23DF711200731AAB /* AppDelegate.swift */,
 				5ACAC31F23DF711200731AAB /* ViewController.swift */,
 				5ACAC32423DF711400731AAB /* Assets.xcassets */,
 				5ACAC32623DF711400731AAB /* LaunchScreen.storyboard */,
 				5ACAC32923DF711400731AAB /* Info.plist */,
+				5ACAC38C23DF810E00731AAB /* AppDelegateEvent.swift */,
 			);
 			path = OkCupid;
 			sourceTree = "<group>";
@@ -163,6 +207,7 @@
 		5ACAC32F23DF759A00731AAB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5ACAC37A23DF7F9800731AAB /* MatchesModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -256,6 +301,42 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		5ACAC37A23DF7F9800731AAB /* MatchesModule */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAC37B23DF7F9800731AAB /* MatchesModule.h */,
+				5ACAC37C23DF7F9800731AAB /* Info.plist */,
+				5ACAC38523DF801700731AAB /* MatchesModule.swift */,
+			);
+			path = MatchesModule;
+			sourceTree = "<group>";
+		};
+		5ACAC38723DF80D100731AAB /* EventListeners */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAC38E23DF813E00731AAB /* MainRoutingListeners */,
+				5ACAC38823DF80E000731AAB /* MainRoutingListenerAggregator.swift */,
+				5ACAC38A23DF80F500731AAB /* AppDelegateRoutingEventsListener.swift */,
+			);
+			path = EventListeners;
+			sourceTree = "<group>";
+		};
+		5ACAC38E23DF813E00731AAB /* MainRoutingListeners */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAC38F23DF815100731AAB /* MatchesRoutingListener.swift */,
+			);
+			path = MainRoutingListeners;
+			sourceTree = "<group>";
+		};
+		5ACAC39123DF825C00731AAB /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAC39223DF826300731AAB /* MatchesSetup.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
 		861FFB5D7D7C62F932DDA40B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +346,8 @@
 				14125056B460F203696DFCE5 /* Pods-Modules-OCFoundation.release.xcconfig */,
 				4BC20CE9130B04F06160D26B /* Pods-OkCupid.debug.xcconfig */,
 				B4E49E2AF0079AA68992CB5B /* Pods-OkCupid.release.xcconfig */,
+				874EDBB1CBEFB64E2FF062FE /* Pods-Modules-MatchesModule.debug.xcconfig */,
+				742B8A836F7AB80F7BACEF44 /* Pods-Modules-MatchesModule.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -277,6 +360,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ACAC33923DF770600731AAB /* OCFoundation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ACAC37423DF7F9800731AAB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ACAC37D23DF7F9800731AAB /* MatchesModule.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +389,7 @@
 			);
 			dependencies = (
 				5ACAC33B23DF770600731AAB /* PBXTargetDependency */,
+				5ACAC37F23DF7F9800731AAB /* PBXTargetDependency */,
 			);
 			name = OkCupid;
 			productName = OkCubid;
@@ -323,6 +415,25 @@
 			productReference = 5ACAC33523DF770600731AAB /* OCFoundation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		5ACAC37823DF7F9800731AAB /* MatchesModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ACAC38223DF7F9800731AAB /* Build configuration list for PBXNativeTarget "MatchesModule" */;
+			buildPhases = (
+				120ED7BCB289185FEE1EF7C6 /* [CP] Check Pods Manifest.lock */,
+				5ACAC37423DF7F9800731AAB /* Headers */,
+				5ACAC37523DF7F9800731AAB /* Sources */,
+				5ACAC37623DF7F9800731AAB /* Frameworks */,
+				5ACAC37723DF7F9800731AAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MatchesModule;
+			productName = MatchesModule;
+			productReference = 5ACAC37923DF7F9800731AAB /* MatchesModule.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -337,6 +448,10 @@
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					5ACAC33423DF770600731AAB = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+					5ACAC37823DF7F9800731AAB = {
 						CreatedOnToolsVersion = 11.3.1;
 						LastSwiftMigration = 1130;
 					};
@@ -357,6 +472,7 @@
 			targets = (
 				5ACAC31723DF711200731AAB /* OkCupid */,
 				5ACAC33423DF770600731AAB /* OCFoundation */,
+				5ACAC37823DF7F9800731AAB /* MatchesModule */,
 			);
 		};
 /* End PBXProject section */
@@ -378,9 +494,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5ACAC37723DF7F9800731AAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		120ED7BCB289185FEE1EF7C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Modules-MatchesModule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3D7AB84C864E41D3548D555F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -449,8 +594,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ACAC39023DF815100731AAB /* MatchesRoutingListener.swift in Sources */,
+				5ACAC38923DF80E000731AAB /* MainRoutingListenerAggregator.swift in Sources */,
+				5ACAC38D23DF810E00731AAB /* AppDelegateEvent.swift in Sources */,
+				5ACAC39323DF826300731AAB /* MatchesSetup.swift in Sources */,
 				5ACAC37323DF7EEF00731AAB /* MatchesAdapter+Config.swift in Sources */,
 				5ACAC32023DF711200731AAB /* ViewController.swift in Sources */,
+				5ACAC38B23DF80F500731AAB /* AppDelegateRoutingEventsListener.swift in Sources */,
 				5ACAC31C23DF711200731AAB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +628,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5ACAC37523DF7F9800731AAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ACAC38623DF801700731AAB /* MatchesModule.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -485,6 +643,11 @@
 			isa = PBXTargetDependency;
 			target = 5ACAC33423DF770600731AAB /* OCFoundation */;
 			targetProxy = 5ACAC33A23DF770600731AAB /* PBXContainerItemProxy */;
+		};
+		5ACAC37F23DF7F9800731AAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5ACAC37823DF7F9800731AAB /* MatchesModule */;
+			targetProxy = 5ACAC37E23DF7F9800731AAB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -715,6 +878,65 @@
 			};
 			name = Release;
 		};
+		5ACAC38323DF7F9800731AAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 874EDBB1CBEFB64E2FF062FE /* Pods-Modules-MatchesModule.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9CHSEMW6LK;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Modules/MatchesModule/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vladz.MatchesModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5ACAC38423DF7F9800731AAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 742B8A836F7AB80F7BACEF44 /* Pods-Modules-MatchesModule.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9CHSEMW6LK;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Modules/MatchesModule/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vladz.MatchesModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -741,6 +963,15 @@
 			buildConfigurations = (
 				5ACAC33F23DF770600731AAB /* Debug */,
 				5ACAC34023DF770600731AAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ACAC38223DF7F9800731AAB /* Build configuration list for PBXNativeTarget "MatchesModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ACAC38323DF7F9800731AAB /* Debug */,
+				5ACAC38423DF7F9800731AAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

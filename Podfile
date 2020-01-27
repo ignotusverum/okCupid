@@ -16,4 +16,5 @@ abstract_target 'Modules' do
   common
   
   target 'OCFoundation'
+  target 'MatchesModule'
 end
