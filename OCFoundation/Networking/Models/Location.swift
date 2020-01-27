@@ -10,17 +10,17 @@ public struct Location:
     LocationProtocol,
     Decodable {
     
-    public var cityName: String
-    public var countryCode: String
-    public var countryName: String
-    public var stateCode: String
-    public var stateName: String
+    public let cityName: String
+    public let countryCode: String
+    public let countryName: String
+    public let stateCode: String
+    public let stateName: String
     
     enum CodingKeys: String, CodingKey {
-        case cityName
-        case countryCode
-        case countryName
-        case stateCode
-        case stateName
+        case cityName = "city_name"
+        case countryCode = "country_code"
+        case countryName = "country_name"
+        case stateCode = "state_code"
+        case stateName = "state_name"
     }
 }

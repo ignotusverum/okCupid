@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4987BE2BF38D966847A12031 /* Pods_Modules_MatchesModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6700C4C831AEDDF63ADE073E /* Pods_Modules_MatchesModule.framework */; };
+		5A3A916723DF9CB9004A6AE1 /* WeakifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3A916623DF9CB9004A6AE1 /* WeakifyTests.swift */; };
+		5A3A916C23DF9D2D004A6AE1 /* ModelsDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3A916B23DF9D2D004A6AE1 /* ModelsDecodingTests.swift */; };
+		5A3A917023DF9D89004A6AE1 /* matches.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A3A916F23DF9D89004A6AE1 /* matches.json */; };
+		5A3A917223DFA23E004A6AE1 /* MatchesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3A917123DFA23E004A6AE1 /* MatchesPage.swift */; };
 		5A71B80E23DF923600AA59B1 /* MatchesModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACAC37923DF7F9800731AAB /* MatchesModule.framework */; };
 		5A71B80F23DF923600AA59B1 /* MatchesModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACAC37923DF7F9800731AAB /* MatchesModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5A71B81123DF923700AA59B1 /* OCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACAC33523DF770600731AAB /* OCFoundation.framework */; };
@@ -48,11 +52,26 @@
 		5ACAC3A223DF837500731AAB /* weakify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAC3A123DF837500731AAB /* weakify.swift */; };
 		5ACAC3A423DF838500731AAB /* ConfigureOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAC3A323DF838500731AAB /* ConfigureOperator.swift */; };
 		5ACAC3A723DF839600731AAB /* ObservableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAC3A623DF839600731AAB /* ObservableType.swift */; };
+		D09FB376B3EBFBD80F45BDAA /* Pods_OCFoundationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CAA089EB494B2925CA041D /* Pods_OCFoundationTests.framework */; };
 		D3D20CDFFD3941E06A330B4A /* Pods_Modules_OCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B995ED1991FFD4B1BF73EBD4 /* Pods_Modules_OCFoundation.framework */; };
 		DB0ED5DAC8DB8E0DD53BCE8F /* Pods_OkCupid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31CA83C618A63BC6F40821A5 /* Pods_OkCupid.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5A3A916123DF9C7C004A6AE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ACAC31023DF711200731AAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ACAC31723DF711200731AAB;
+			remoteInfo = OkCupid;
+		};
+		5A3A916823DF9CDD004A6AE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ACAC31023DF711200731AAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ACAC33423DF770600731AAB;
+			remoteInfo = OCFoundation;
+		};
 		5ACAC33A23DF770600731AAB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5ACAC31023DF711200731AAB /* Project object */;
@@ -95,6 +114,12 @@
 		31CA83C618A63BC6F40821A5 /* Pods_OkCupid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkCupid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE6F1B3E196668620A976F3 /* Pods-Modules-OCFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-OCFoundation.debug.xcconfig"; path = "Target Support Files/Pods-Modules-OCFoundation/Pods-Modules-OCFoundation.debug.xcconfig"; sourceTree = "<group>"; };
 		3DF8BBFBDAC2A7C099EDDB13 /* Pods-Modules-MatchesModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-MatchesModule.release.xcconfig"; path = "Target Support Files/Pods-Modules-MatchesModule/Pods-Modules-MatchesModule.release.xcconfig"; sourceTree = "<group>"; };
+		5A3A915C23DF9C7C004A6AE1 /* OCFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A3A916023DF9C7C004A6AE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A3A916623DF9CB9004A6AE1 /* WeakifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakifyTests.swift; sourceTree = "<group>"; };
+		5A3A916B23DF9D2D004A6AE1 /* ModelsDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsDecodingTests.swift; sourceTree = "<group>"; };
+		5A3A916F23DF9D89004A6AE1 /* matches.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = matches.json; sourceTree = "<group>"; };
+		5A3A917123DFA23E004A6AE1 /* MatchesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesPage.swift; sourceTree = "<group>"; };
 		5ACAC31823DF711200731AAB /* OkCupid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OkCupid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACAC31B23DF711200731AAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ACAC31F23DF711200731AAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,16 +162,26 @@
 		5ACAC3A123DF837500731AAB /* weakify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weakify.swift; sourceTree = "<group>"; };
 		5ACAC3A323DF838500731AAB /* ConfigureOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureOperator.swift; sourceTree = "<group>"; };
 		5ACAC3A623DF839600731AAB /* ObservableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableType.swift; sourceTree = "<group>"; };
-		5ACAC3B023DF83CC00731AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61CAA089EB494B2925CA041D /* Pods_OCFoundationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCFoundationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E9B6CCF15684BCD4C8B4C8 /* Pods-OCFoundationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCFoundationTests.release.xcconfig"; path = "Target Support Files/Pods-OCFoundationTests/Pods-OCFoundationTests.release.xcconfig"; sourceTree = "<group>"; };
 		6700C4C831AEDDF63ADE073E /* Pods_Modules_MatchesModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_MatchesModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		759C7E67349B5F241D00E30D /* Pods-OkCupid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCupid.release.xcconfig"; path = "Target Support Files/Pods-OkCupid/Pods-OkCupid.release.xcconfig"; sourceTree = "<group>"; };
 		B995ED1991FFD4B1BF73EBD4 /* Pods_Modules_OCFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_OCFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68B47E132BDC13EE398E245 /* Pods-OkCupid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkCupid.debug.xcconfig"; path = "Target Support Files/Pods-OkCupid/Pods-OkCupid.debug.xcconfig"; sourceTree = "<group>"; };
+		D523D5A2647DF77279A94F28 /* Pods-OCFoundationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCFoundationTests.debug.xcconfig"; path = "Target Support Files/Pods-OCFoundationTests/Pods-OCFoundationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB1417A3E3739D7337D3F25F /* Pods-Modules-OCFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-OCFoundation.release.xcconfig"; path = "Target Support Files/Pods-Modules-OCFoundation/Pods-Modules-OCFoundation.release.xcconfig"; sourceTree = "<group>"; };
 		DE02C55ECE1B31A55297E736 /* Pods-Modules-MatchesModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-MatchesModule.debug.xcconfig"; path = "Target Support Files/Pods-Modules-MatchesModule/Pods-Modules-MatchesModule.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5A3A915923DF9C7C004A6AE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D09FB376B3EBFBD80F45BDAA /* Pods_OCFoundationTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5ACAC31523DF711200731AAB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -182,8 +217,44 @@
 				6700C4C831AEDDF63ADE073E /* Pods_Modules_MatchesModule.framework */,
 				B995ED1991FFD4B1BF73EBD4 /* Pods_Modules_OCFoundation.framework */,
 				31CA83C618A63BC6F40821A5 /* Pods_OkCupid.framework */,
+				61CAA089EB494B2925CA041D /* Pods_OCFoundationTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A3A915D23DF9C7C004A6AE1 /* OCFoundationTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A3A916D23DF9D4A004A6AE1 /* Mocks */,
+				5A3A916023DF9C7C004A6AE1 /* Info.plist */,
+				5A3A916623DF9CB9004A6AE1 /* WeakifyTests.swift */,
+				5A3A916A23DF9D1F004A6AE1 /* ModelsTest */,
+			);
+			path = OCFoundationTests;
+			sourceTree = "<group>";
+		};
+		5A3A916A23DF9D1F004A6AE1 /* ModelsTest */ = {
+			isa = PBXGroup;
+			children = (
+				5A3A916B23DF9D2D004A6AE1 /* ModelsDecodingTests.swift */,
+			);
+			path = ModelsTest;
+			sourceTree = "<group>";
+		};
+		5A3A916D23DF9D4A004A6AE1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				5A3A916E23DF9D51004A6AE1 /* ModelsJSON */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		5A3A916E23DF9D51004A6AE1 /* ModelsJSON */ = {
+			isa = PBXGroup;
+			children = (
+				5A3A916F23DF9D89004A6AE1 /* matches.json */,
+			);
+			path = ModelsJSON;
 			sourceTree = "<group>";
 		};
 		5ACAC30F23DF711200731AAB = {
@@ -204,6 +275,7 @@
 				5ACAC31823DF711200731AAB /* OkCupid.app */,
 				5ACAC33523DF770600731AAB /* OCFoundation.framework */,
 				5ACAC37923DF7F9800731AAB /* MatchesModule.framework */,
+				5A3A915C23DF9C7C004A6AE1 /* OCFoundationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -240,7 +312,7 @@
 				5ACAC34223DF771200731AAB /* Error */,
 				5ACAC33723DF770600731AAB /* OCFoundation.h */,
 				5ACAC33823DF770600731AAB /* Info.plist */,
-				5ACAC3AD23DF83CC00731AAB /* OCFoundationTests */,
+				5A3A915D23DF9C7C004A6AE1 /* OCFoundationTests */,
 			);
 			path = OCFoundation;
 			sourceTree = "<group>";
@@ -272,6 +344,7 @@
 				5ACAC36023DF7C4500731AAB /* Match.swift */,
 				5ACAC35B23DF7A9400731AAB /* Photo.swift */,
 				5ACAC34E23DF78D900731AAB /* Protocols */,
+				5A3A917123DFA23E004A6AE1 /* MatchesPage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -405,14 +478,6 @@
 			path = Rx;
 			sourceTree = "<group>";
 		};
-		5ACAC3AD23DF83CC00731AAB /* OCFoundationTests */ = {
-			isa = PBXGroup;
-			children = (
-				5ACAC3B023DF83CC00731AAB /* Info.plist */,
-			);
-			path = OCFoundationTests;
-			sourceTree = "<group>";
-		};
 		861FFB5D7D7C62F932DDA40B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +487,8 @@
 				DB1417A3E3739D7337D3F25F /* Pods-Modules-OCFoundation.release.xcconfig */,
 				C68B47E132BDC13EE398E245 /* Pods-OkCupid.debug.xcconfig */,
 				759C7E67349B5F241D00E30D /* Pods-OkCupid.release.xcconfig */,
+				D523D5A2647DF77279A94F28 /* Pods-OCFoundationTests.debug.xcconfig */,
+				65E9B6CCF15684BCD4C8B4C8 /* Pods-OCFoundationTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -448,6 +515,27 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5A3A915B23DF9C7C004A6AE1 /* OCFoundationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A3A916323DF9C7C004A6AE1 /* Build configuration list for PBXNativeTarget "OCFoundationTests" */;
+			buildPhases = (
+				984D9CB13A7CAC0A52A19C60 /* [CP] Check Pods Manifest.lock */,
+				5A3A915823DF9C7C004A6AE1 /* Sources */,
+				5A3A915923DF9C7C004A6AE1 /* Frameworks */,
+				5A3A915A23DF9C7C004A6AE1 /* Resources */,
+				30F07C07DF27C43E5B29C983 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A3A916923DF9CDD004A6AE1 /* PBXTargetDependency */,
+				5A3A916223DF9C7C004A6AE1 /* PBXTargetDependency */,
+			);
+			name = OCFoundationTests;
+			productName = OCFoundationTests;
+			productReference = 5A3A915C23DF9C7C004A6AE1 /* OCFoundationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5ACAC31723DF711200731AAB /* OkCupid */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5ACAC32C23DF711400731AAB /* Build configuration list for PBXNativeTarget "OkCupid" */;
@@ -519,6 +607,11 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Vlad Z.";
 				TargetAttributes = {
+					5A3A915B23DF9C7C004A6AE1 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+						TestTargetID = 5ACAC31723DF711200731AAB;
+					};
 					5ACAC31723DF711200731AAB = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -548,11 +641,20 @@
 				5ACAC31723DF711200731AAB /* OkCupid */,
 				5ACAC33423DF770600731AAB /* OCFoundation */,
 				5ACAC37823DF7F9800731AAB /* MatchesModule */,
+				5A3A915B23DF9C7C004A6AE1 /* OCFoundationTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5A3A915A23DF9C7C004A6AE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A3A917023DF9D89004A6AE1 /* matches.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5ACAC31623DF711200731AAB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -579,6 +681,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		30F07C07DF27C43E5B29C983 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OCFoundationTests/Pods-OCFoundationTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OCFoundationTests/Pods-OCFoundationTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OCFoundationTests/Pods-OCFoundationTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		94DD5F1DF810334DC600761A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -595,6 +714,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Modules-OCFoundation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		984D9CB13A7CAC0A52A19C60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCFoundationTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -665,6 +806,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5A3A915823DF9C7C004A6AE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A3A916C23DF9D2D004A6AE1 /* ModelsDecodingTests.swift in Sources */,
+				5A3A916723DF9CB9004A6AE1 /* WeakifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5ACAC31423DF711200731AAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -694,6 +844,7 @@
 				5ACAC35C23DF7A9400731AAB /* Photo.swift in Sources */,
 				5ACAC35423DF792F00731AAB /* LocationProtocol.swift in Sources */,
 				5ACAC35223DF78EB00731AAB /* MatchProtocol.swift in Sources */,
+				5A3A917223DFA23E004A6AE1 /* MatchesPage.swift in Sources */,
 				5ACAC34B23DF777B00731AAB /* Request.swift in Sources */,
 				5ACAC36123DF7C4500731AAB /* Match.swift in Sources */,
 				5ACAC3A223DF837500731AAB /* weakify.swift in Sources */,
@@ -721,6 +872,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5A3A916223DF9C7C004A6AE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5ACAC31723DF711200731AAB /* OkCupid */;
+			targetProxy = 5A3A916123DF9C7C004A6AE1 /* PBXContainerItemProxy */;
+		};
+		5A3A916923DF9CDD004A6AE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5ACAC33423DF770600731AAB /* OCFoundation */;
+			targetProxy = 5A3A916823DF9CDD004A6AE1 /* PBXContainerItemProxy */;
+		};
 		5ACAC33B23DF770600731AAB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5ACAC33423DF770600731AAB /* OCFoundation */;
@@ -750,6 +911,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5A3A916423DF9C7C004A6AE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D523D5A2647DF77279A94F28 /* Pods-OCFoundationTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9CHSEMW6LK;
+				INFOPLIST_FILE = OCFoundation/OCFoundationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vladz.OCFoundationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OkCupid.app/OkCupid";
+			};
+			name = Debug;
+		};
+		5A3A916523DF9C7C004A6AE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65E9B6CCF15684BCD4C8B4C8 /* Pods-OCFoundationTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9CHSEMW6LK;
+				INFOPLIST_FILE = OCFoundation/OCFoundationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vladz.OCFoundationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OkCupid.app/OkCupid";
+			};
+			name = Release;
+		};
 		5ACAC32A23DF711400731AAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1081,6 +1287,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5A3A916323DF9C7C004A6AE1 /* Build configuration list for PBXNativeTarget "OCFoundationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A3A916423DF9C7C004A6AE1 /* Debug */,
+				5A3A916523DF9C7C004A6AE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5ACAC31323DF711200731AAB /* Build configuration list for PBXProject "OkCupid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -10,8 +10,8 @@ public struct Photo:
     PhotoProtocol,
     Decodable {
     
-    public var type: PhotoType
-    public var path: String
+    public let type: PhotoType
+    public let path: String
     
     public init(from decoder: Decoder) throws {
         /// Based on requirements, maybe we want to throw, vs return undefined?

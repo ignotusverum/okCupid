@@ -10,7 +10,7 @@ public protocol MatchProtocol {
     var age: Int { get }
     var liked: Bool { get }
     var userId: String { get }
-    var isOnline: Bool { get }
+    var isOnline: Int { get }
     var userName: String { get }
     var location: Location { get }
     var photo: PhotoContainer { get }

@@ -9,21 +9,21 @@
 public struct Match:
     MatchProtocol,
     Decodable {
-    public var age: Int
-    public var liked: Bool
-    public var userId: String
-    public var isOnline: Bool
-    public var userName: String
-    public var location: Location
-    public var photo: PhotoContainer
+    public let age: Int
+    public let liked: Bool
+    public let userId: String
+    public let isOnline: Int
+    public let userName: String
+    public let location: Location
+    public let photo: PhotoContainer
     
     enum CodingKeys: String, CodingKey {
         case age
         case liked
         case photo
-        case userId
-        case isOnline
-        case userName
+        case userId = "userid"
+        case isOnline = "is_online"
+        case userName = "username"
         case location
     }
 }
