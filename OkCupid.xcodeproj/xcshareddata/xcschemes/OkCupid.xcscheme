@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5ACAC3AB23DF83CC00731AAB"
+               BlueprintIdentifier = "5A3A915B23DF9C7C004A6AE1"
                BuildableName = "OCFoundationTests.xctest"
                BlueprintName = "OCFoundationTests"
                ReferencedContainer = "container:OkCupid.xcodeproj">
@@ -45,6 +45,16 @@
                BlueprintIdentifier = "5A3A914D23DF9C37004A6AE1"
                BuildableName = "OkCupidTests.xctest"
                BlueprintName = "OkCupidTests"
+               ReferencedContainer = "container:OkCupid.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5A026A6023DFDB7C00F58E43"
+               BuildableName = "ThemeManagerTests.xctest"
+               BlueprintName = "ThemeManagerTests"
                ReferencedContainer = "container:OkCupid.xcodeproj">
             </BuildableReference>
          </TestableReference>

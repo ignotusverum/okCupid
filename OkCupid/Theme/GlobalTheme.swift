@@ -23,37 +23,34 @@ private extension ThemeColorPalette {
     }
 }
 
-private extension ThemeFontAttribute {
-    func serif(withSize size: CGFloat = UIFont.labelFontSize) -> UIFont {
-        switch self {
-        case .regular: return .helvetica(size)
-        case .bold: return .helveticaBold(size)
-        }
+extension UIFont {
+
+    func withTraits(traits:UIFontDescriptor.SymbolicTraits...) -> UIFont {
+        let descriptor = self.fontDescriptor
+            .withSymbolicTraits(UIFontDescriptor.SymbolicTraits(traits))
+        return UIFont(descriptor: descriptor!, size: 0)
     }
-    
-    func sans(withSize size: CGFloat = UIFont.labelFontSize) -> UIFont {
-        switch self {
-        case .regular: return .helvetica(size)
-        case .bold: return .helveticaBold(size)
-        }
+
+    func bold() -> UIFont {
+        return withTraits(traits: .traitBold)
     }
 }
 
 private extension ThemeFontStyle {
-    var fontSize: CGFloat {
-        switch self {
-        case .small: return 11
-        case .title: return 16
-        case .subtitle: return 15
-        case .navigationTitle: return 20
-        }
-    }
-    
     var font: UIFont {
+        var resultFont: UIFont
         switch self {
-        case .small, .subtitle, .title, .navigationTitle:
-            return attribute.sans(withSize: fontSize)
+        case .small:
+            resultFont = UIFont.preferredFont(forTextStyle: .caption2)
+        case .subtitle:
+            resultFont = UIFont.preferredFont(forTextStyle: .subheadline)
+        case .title:
+            resultFont = UIFont.preferredFont(forTextStyle: .callout)
+        case .navigationTitle:
+            resultFont = UIFont.preferredFont(forTextStyle: .title3)
         }
+        
+        return attribute == .bold ? resultFont.bold() : resultFont
     }
     
     var kern: CGFloat {
@@ -98,10 +95,6 @@ class GlobalTheme: ThemeProtocol {
     
     func font(forStyle style: ThemeFontStyle) -> UIFont {
         return style.font
-    }
-    
-    func fontSize(forStyle style: ThemeFontStyle) -> CGFloat {
-        return style.fontSize
     }
     
     func kern(forStyle style: ThemeFontStyle) -> CGFloat {

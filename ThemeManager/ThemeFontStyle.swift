@@ -6,8 +6,9 @@
 //  Copyright © 2020 Vlad Z. All rights reserved.
 //
 
-public enum ThemeFontAttribute: CaseIterable {
-    case regular, bold
+public enum ThemeFontAttribute: String, CaseIterable {
+    case regular = ""
+    case bold = "-Bold"
 }
 
 public enum ThemeFontStyle: CaseIterable {

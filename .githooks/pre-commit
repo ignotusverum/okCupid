@@ -1,0 +1,6 @@
+#!/bin/bash
+echo '##### RUNNING SWIFT FORMAT #####'
+git diff --diff-filter=d --staged --name-only | grep -e '\(.*\).swift$' | while read line; do
+  consumer/Pods/SwiftFormat/CommandLineTool/swiftformat --config consumer/swiftformat.config "${line}";
+  git add "$line";
+done

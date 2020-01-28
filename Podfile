@@ -5,6 +5,7 @@ inhibit_all_warnings! # supresses pods project warnings
 
 def common
   pod 'RxDataSources'
+  pod 'SwiftGen', '~> 5.3.0'
   pod 'MERLin', :git => 'https://github.com/gringoireDM/MERLin.git', :branch => 'master'
 end
 

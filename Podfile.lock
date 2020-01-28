@@ -23,6 +23,7 @@ PODS:
   - RxSwift (5.0.1)
   - RxTest (5.0.1):
     - RxSwift (~> 5)
+  - SwiftGen (5.3.0)
 
 DEPENDENCIES:
   - MERLin (from `https://github.com/gringoireDM/MERLin.git`, branch `master`)
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - Quick
   - RxDataSources
   - RxTest
+  - SwiftGen (~> 5.3.0)
 
 SPEC REPOS:
   trunk:
@@ -46,6 +48,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - RxTest
+    - SwiftGen
 
 EXTERNAL SOURCES:
   MERLin:
@@ -71,7 +74,8 @@ SPEC CHECKSUMS:
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   RxTest: 0132f952a61da82d5233abedaa559df91e5330e5
+  SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
 
-PODFILE CHECKSUM: c72883c5896a791706567cf74b06fd9aefb02b2b
+PODFILE CHECKSUM: 83fadd4b512d822226aba9206f647d158241d45c
 
 COCOAPODS: 1.8.4

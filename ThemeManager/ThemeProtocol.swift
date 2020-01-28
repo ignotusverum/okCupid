@@ -22,7 +22,6 @@ public protocol ThemeProtocol: class {
     // MARK: Fonts
     
     func font(forStyle style: ThemeFontStyle) -> UIFont
-    func fontSize(forStyle style: ThemeFontStyle) -> CGFloat
     func kern(forStyle style: ThemeFontStyle) -> CGFloat
     
     // MARK: Labels

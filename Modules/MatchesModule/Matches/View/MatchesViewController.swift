@@ -14,7 +14,6 @@ import OKImageDownloader
 import MERLin
 import RxDataSources
 
-
 extension MatchesRow: IdentifiableType, Equatable {
     public var identity: String { return title }
     public static func == (lhs: MatchesRow,
@@ -66,7 +65,9 @@ class MatchesViewController: UIViewController, UICollectionViewDelegateFlowLayou
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Browse"
+        title = L10n.Matches.title
+        accessibilityLabel = L10n.Matches.titleKey
+        
         tabBarController?.tabBar.isHidden = true
         
         applyTheme()
