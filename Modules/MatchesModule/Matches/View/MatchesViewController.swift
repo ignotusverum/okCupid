@@ -135,6 +135,25 @@ class MatchesViewController: UIViewController, UICollectionViewDelegateFlowLayou
                 self?.activityIndicator.stopAnimating()
             }).disposed(by: disposeBag)
         
+        /// TODO: Paging
+        Observable.combineLatest(
+            collectionView.rx.contentOffset.map { $0.y },
+            collectionView.rx.observe(CGSize.self, "contentSize")
+                .compactMap { $0?.height }
+        ).map { [weak self] (y, h) in
+            guard let self = self,
+                (h - self.collectionView.bounds.height) >= (y - 100) else {
+                    return false
+            }
+            return true
+        }.distinctUntilChanged()
+            .takeTrue()
+            .asDriverIgnoreError()
+            .drive(onNext: { _ in
+                print("[DEBUG TODO] Implement paging by cursors")
+            })
+            .disposed(by: disposeBag)
+        
         states.connect()
             .disposed(by: disposeBag)
     }
