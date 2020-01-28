@@ -43,7 +43,7 @@ private extension ThemeFontStyle {
         case .small:
             resultFont = UIFont.preferredFont(forTextStyle: .caption2)
         case .subtitle:
-            resultFont = UIFont.preferredFont(forTextStyle: .subheadline)
+            resultFont = UIFont.preferredFont(forTextStyle: .body)
         case .title:
             resultFont = UIFont.preferredFont(forTextStyle: .callout)
         case .navigationTitle:

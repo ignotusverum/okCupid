@@ -32,9 +32,9 @@ class MatchesViewController: UIViewController, UICollectionViewDelegateFlowLayou
                                             let layout = UICollectionViewFlowLayout()
                                             
                                             layout.sectionInset = UIEdgeInsets(top: 10,
-                                                                               left: 10,
+                                                                               left: 7,
                                                                                bottom: 20,
-                                                                               right: 10)
+                                                                               right: 7)
                                             
                                             layout.minimumLineSpacing = 20
                                             layout.minimumInteritemSpacing = 0
@@ -175,7 +175,8 @@ class MatchesViewController: UIViewController, UICollectionViewDelegateFlowLayou
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = collectionView.frame.width / 2 - 20
+        
+        let cellWidth = collectionView.frame.width / 2 - 14 // 14 - padding from left/right
         let cellHeight = cellWidth * 1.75
         
         return CGSize(width: cellWidth,
