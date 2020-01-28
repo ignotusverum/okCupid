@@ -34,8 +34,7 @@ enum MatchesState: CaseAccessible, Equatable {
         case (_, .loaded(let newDatasource)):
             
             /// Update when paging in place
-            let pageToRows = newDatasource
-                .flatMap { $0.items }
+            let pageToRows = newDatasource.items
                 .map(MatchesRow.init)
             
             return .pages(pageToRows)

@@ -31,4 +31,53 @@ class MatchesViewModelTests: QuickSpec {
         
         return observable
     }
+    
+    override func spec() {
+        describe("Having a matchesViewModel") {
+            var viewModel: MatchesViewModelProtocol!
+
+            var scheduler: TestScheduler!
+
+            beforeEach {
+                scheduler = TestScheduler(initialClock: 0,
+                                          simulateProcessingDelay: false)
+            }
+
+            context("with a model that returns empty matches") {
+                let model = MockMatchesModel(.empty)
+
+                beforeEach {
+                    viewModel = MatchesViewModel(model: model, events: PublishSubject())
+                }
+
+                it("should transform to no pages") {
+                    expect(self.testObservable(for: viewModel,
+                                               input: [],
+                                               scheduler: scheduler).events).to(equal([
+                        .next(0, .loading(whileInState: nil)),
+                        .next(0, .pages([]))
+                    ]))
+                }
+            }
+
+            context("with a model that returns a pages with matches") {
+                var model: MockMatchesModel!
+
+                beforeEach {
+                    model = MockMatchesModel(.pages)
+                    viewModel = MatchesViewModel(model: model,
+                                                 events: PublishSubject())
+                }
+
+                it("should transform to pages") {
+                    expect(self.testObservable(for: viewModel, input: [], scheduler: scheduler).events).to(equal([
+                        .next(0, .loading(whileInState: nil)),
+                        .next(0, .pages(model.pages.items
+                            .map(MatchesRow.init)
+                        ))
+                    ]))
+                }
+            }
+        }
+    }
 }

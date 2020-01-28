@@ -18,7 +18,7 @@ enum ExpectedMatchesPageType: String {
 class MockMatchesModel: MatchesModelProtocol {
     
     let expectedPageType: ExpectedMatchesPageType
-    var pages: [MatchesPage]
+    var pages: MatchesPage
     init(_ pageType: ExpectedMatchesPageType) {
         expectedPageType = pageType
         
@@ -26,10 +26,10 @@ class MockMatchesModel: MatchesModelProtocol {
         let path = bundle.path(forResource: pageType.rawValue, ofType: "json")!
         let data = try! Data(contentsOf: URL(fileURLWithPath: path))
         
-        pages = try! JSONDecoder().decode([MatchesPage].self, from: data)
+        pages = try! JSONDecoder().decode(MatchesPage.self, from: data)
     }
     
-    func fetchMatches() -> Single<[MatchesPage]> {
+    func fetchMatches() -> Single<MatchesPage> {
         return .just(pages)
     }
 }
