@@ -53,7 +53,6 @@
 		5AAAD01623DFED7800C4D539 /* pages.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AAAD01523DFED7800C4D539 /* pages.json */; };
 		5AAAD01823DFED8600C4D539 /* pages_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AAAD01723DFED8600C4D539 /* pages_empty.json */; };
 		5ACAC31C23DF711200731AAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAC31B23DF711200731AAB /* AppDelegate.swift */; };
-		5ACAC32023DF711200731AAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAC31F23DF711200731AAB /* ViewController.swift */; };
 		5ACAC32523DF711400731AAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ACAC32423DF711400731AAB /* Assets.xcassets */; };
 		5ACAC32823DF711400731AAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ACAC32623DF711400731AAB /* LaunchScreen.storyboard */; };
 		5ACAC33923DF770600731AAB /* OCFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5ACAC33723DF770600731AAB /* OCFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -237,7 +236,6 @@
 		5AAAD01723DFED8600C4D539 /* pages_empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pages_empty.json; sourceTree = "<group>"; };
 		5ACAC31823DF711200731AAB /* OkCupid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OkCupid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACAC31B23DF711200731AAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5ACAC31F23DF711200731AAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5ACAC32423DF711400731AAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5ACAC32723DF711400731AAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5ACAC32923DF711400731AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -585,7 +583,6 @@
 				5ACAC38723DF80D100731AAB /* EventListeners */,
 				5ACAC37123DF7EE200731AAB /* Networking */,
 				5ACAC31B23DF711200731AAB /* AppDelegate.swift */,
-				5ACAC31F23DF711200731AAB /* ViewController.swift */,
 				5A026A7023DFDDFA00F58E43 /* Resources */,
 				5ACAC38C23DF810E00731AAB /* AppDelegateEvent.swift */,
 			);
@@ -1392,7 +1389,6 @@
 				5ACAC38D23DF810E00731AAB /* AppDelegateEvent.swift in Sources */,
 				5ACAC39323DF826300731AAB /* MatchesSetup.swift in Sources */,
 				5ACAC37323DF7EEF00731AAB /* MatchesAdapter+Config.swift in Sources */,
-				5ACAC32023DF711200731AAB /* ViewController.swift in Sources */,
 				5ACAC38B23DF80F500731AAB /* AppDelegateRoutingEventsListener.swift in Sources */,
 				5A026A2023DFA90800F58E43 /* TabbarControllerRouter.swift in Sources */,
 				5ACAC31C23DF711200731AAB /* AppDelegate.swift in Sources */,
