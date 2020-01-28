@@ -11,7 +11,7 @@ import Foundation
 import RxSwift
 
 public protocol MatchesNetworkingProtocol where Self: NetworkingAdapter {
-    static func fetch()-> Single<MatchesPage>
+    static func fetch()-> Single<[MatchesPage]>
 }
 
 public class MatchesAdapter: NetworkingAdapter {
@@ -26,7 +26,7 @@ public class MatchesAdapter: NetworkingAdapter {
 }
 
 extension MatchesAdapter: MatchesNetworkingProtocol {
-    public static func fetch() -> Single<MatchesPage> {
+    public static func fetch() -> Single<[MatchesPage]> {
         let config = Requests
             .fetch
             .configure

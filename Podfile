@@ -35,6 +35,10 @@ abstract_target 'Modules' do
   
   target 'MatchesModule' do
     imageLoading
+    target 'MatchesModuleTests' do
+      inherit! :search_paths
+      tests
+    end
   end
 end
 

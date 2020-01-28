@@ -33,8 +33,9 @@ enum MatchesState: CaseAccessible, Equatable {
         switch (state, model) {
         case (_, .loaded(let newDatasource)):
             
-            let pageToRows = newDatasource.items
-                .sorted(by: { $0.match > $1.match }) // Maybe in the future it should be sorted by location, based on business needs
+            /// Update when paging in place
+            let pageToRows = newDatasource
+                .flatMap { $0.items }
                 .map(MatchesRow.init)
             
             return .pages(pageToRows)

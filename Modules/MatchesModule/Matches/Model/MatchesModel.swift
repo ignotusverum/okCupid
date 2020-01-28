@@ -10,11 +10,11 @@ import RxSwift
 import OCFoundation
 
 protocol MatchesModelProtocol {
-    func fetchMatches()-> Single<MatchesPage>
+    func fetchMatches()-> Single<[MatchesPage]>
 }
 
 class MatchesModel: MatchesModelProtocol {
-    func fetchMatches()-> Single<MatchesPage> {
+    func fetchMatches()-> Single<[MatchesPage]> {
         MatchesAdapter.fetch()
     }
 }
