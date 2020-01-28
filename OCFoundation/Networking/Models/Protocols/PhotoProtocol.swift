@@ -20,5 +20,5 @@ public protocol PhotoProtocol {
 }
 
 public protocol PhotoContainerProtocol {
-    var photos: [Photo] { get }
+    var photoByType: [PhotoType: Photo] { get }
 }

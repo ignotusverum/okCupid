@@ -9,6 +9,7 @@
 import UIKit
 import MERLin
 import OCFoundation
+import ThemeManager
 
 @UIApplicationMain
 class AppDelegate:
@@ -33,6 +34,9 @@ class AppDelegate:
         
         // Configure networkign adapters
         MatchesAdapter.configurator()
+        
+        // App Theme
+        ThemeContainer.defaultTheme = GlobalTheme()
         
         /// Modules + Router
         moduleManager = BaseModuleManager()

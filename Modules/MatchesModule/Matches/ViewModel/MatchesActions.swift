@@ -11,7 +11,7 @@ import OCFoundation
 
 enum MatchesUIAction: EventProtocol {
     case reload
-    case matchSelected(Match)
+    case matchIdSelected(String)
 }
 
 enum MatchesModelAction: EventProtocol {

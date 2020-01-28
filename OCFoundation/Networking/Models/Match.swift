@@ -6,13 +6,20 @@
 //  Copyright © 2020 Vlad Z. All rights reserved.
 //
 
+public enum OnlineType: Int, Decodable {
+    case offline = 0
+    case active
+    case unknown
+}
+
 public struct Match:
     MatchProtocol,
     Decodable {
     public let age: Int
+    public let match: Int
     public let liked: Bool
     public let userId: String
-    public let isOnline: Int
+    public let onlineType: OnlineType
     public let userName: String
     public let location: Location
     public let photo: PhotoContainer
@@ -20,9 +27,10 @@ public struct Match:
     enum CodingKeys: String, CodingKey {
         case age
         case liked
+        case match
         case photo
         case userId = "userid"
-        case isOnline = "is_online"
+        case onlineType = "is_online"
         case userName = "username"
         case location
     }

@@ -12,6 +12,10 @@ target 'OkCupid' do
   common  
 end
 
+def imageLoading
+  pod 'OKImageDownloader'
+end
+
 def tests
     pod 'Quick'
     pod 'Nimble'
@@ -28,6 +32,8 @@ abstract_target 'Modules' do
     end
   end
   
-  target 'MatchesModule'
+  target 'MatchesModule' do
+    imageLoading
+  end
 end
 

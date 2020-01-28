@@ -13,6 +13,8 @@ public struct Photo:
     public let type: PhotoType
     public let path: String
     
+    public var pathURL: URL? { URL(string: path) }
+    
     public init(from decoder: Decoder) throws {
         /// Based on requirements, maybe we want to throw, vs return undefined?
         type = try PhotoType(rawValue: decoder.currentTitle()) ?? .undefined
@@ -25,9 +27,10 @@ public struct Photo:
 public struct PhotoContainer:
     PhotoContainerProtocol,
     Decodable {
-    public let photos: [Photo]
+    public let photoByType: [PhotoType: Photo]
     public init(from decoder: Decoder) throws {
-        photos = try decoder.decodeTitledElements(Photo.self)
+        let photosArray = try decoder.decodeTitledElements(Photo.self)
+        photoByType = Dictionary(uniqueKeysWithValues: photosArray.map{ ($0.type, $0) })
     }
 }
 

@@ -10,18 +10,19 @@ import MERLin
 import OCFoundation
 
 enum MatchesState: CaseAccessible, Equatable {
-    case pages([MatchesPage])
+    /// Ideally we would also want to introduce empty state, if there's no results
+    case pages([MatchesRow])
     
     indirect case loading(whileInState: MatchesState?)
     
     static func reduce(_ state: MatchesState,
                        action: MatchesUIAction) -> MatchesState {
         switch (state, action) {
-            // Reload
+        // Reload
         case let (.loading(aState), .reload):
-                return .loading(whileInState: aState)
-            case (.pages, .reload):
-                return .loading(whileInState: state)
+            return .loading(whileInState: aState)
+        case (.pages, .reload):
+            return .loading(whileInState: state)
         // Not changing state
         default: return state
         }
@@ -31,12 +32,12 @@ enum MatchesState: CaseAccessible, Equatable {
                        model: MatchesModelAction) -> MatchesState {
         switch (state, model) {
         case (_, .loaded(let newDatasource)):
-            return .pages([newDatasource])
+            
+            let pageToRows = newDatasource.items
+                .sorted(by: { $0.match > $1.match }) // Maybe in the future it should be sorted by location, based on business needs
+                .map(MatchesRow.init)
+            
+            return .pages(pageToRows)
         }
     }
-}
-
-/// TODO: In the future this needs to be based on page id
-extension MatchesPage: Equatable {
-    public static func == (lhs: MatchesPage, rhs: MatchesPage) -> Bool { true }
 }

@@ -24,7 +24,7 @@ public class MatchesModuleContext: ModuleContextProtocol {
 }
 
 public enum MatchesModuleEvents: EventProtocol {
-    case matchSelected(Match)
+    case matchIdSelected(String)
 }
 
 public class MatchesModule: ModuleProtocol, EventsProducer {
@@ -38,7 +38,10 @@ public class MatchesModule: ModuleProtocol, EventsProducer {
     }
     
     public func unmanagedRootViewController() -> UIViewController {
-        let viewModel = MatchesViewModel(events: _events)
+        let model = MatchesModel()
+        let viewModel = MatchesViewModel(model: model,
+                                         events: _events)
+        
         let view = MatchesViewController(with: viewModel)
         
         return view

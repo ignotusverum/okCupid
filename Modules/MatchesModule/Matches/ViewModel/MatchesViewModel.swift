@@ -16,9 +16,12 @@ protocol MatchesViewModelProtocol {
 }
 
 class MatchesViewModel: MatchesViewModelProtocol {
+    let model: MatchesModelProtocol
     let events: PublishSubject<MatchesModuleEvents>
     
-    init(events: PublishSubject<MatchesModuleEvents>) {
+    init(model: MatchesModelProtocol,
+         events: PublishSubject<MatchesModuleEvents>) {
+        self.model = model
         self.events = events
     }
     
@@ -41,16 +44,16 @@ class MatchesViewModel: MatchesViewModelProtocol {
                    default: .empty()) { (me: MatchesViewModel, state) in
                     state.capture(case: MatchesState.loading).toVoid()
                         .compactFlatMapLatest { _ in
-                            MatchesAdapter
-                                .fetch()
+                            me.model
+                                .fetchMatches()
                                 .asObservable()
                                 .map(MatchesModelAction.loaded)
                     }
                     .map(MatchesActions.model)
         })
             .sendSideEffects({ state in
-                input.capture(case: MatchesUIAction.matchSelected)
-                    .map(MatchesModuleEvents.matchSelected)
+                input.capture(case: MatchesUIAction.matchIdSelected)
+                    .map(MatchesModuleEvents.matchIdSelected)
             }, to: events.asObserver())
     }
 }

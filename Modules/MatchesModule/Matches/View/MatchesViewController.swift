@@ -9,12 +9,18 @@
 import OCUIKit
 import OCFoundation
 
+import OKImageDownloader
+
 import MERLin
 import RxDataSources
 
-extension Match: IdentifiableType {
-    public var identity: String { return userId }
+
+extension MatchesRow: IdentifiableType, Equatable {
+    public var identity: String { return title }
+    public static func == (lhs: MatchesRow,
+                           rhs: MatchesRow) -> Bool { lhs.title == rhs.title }
 }
+
 
 class MatchesViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     let disposeBag = DisposeBag()
@@ -24,14 +30,19 @@ class MatchesViewController: UIViewController, UICollectionViewDelegateFlowLayou
     
     let collectionView = UICollectionView(frame: .zero,
                                           collectionViewLayout: UICollectionViewFlowLayout()) <~ {
-        let layout = UICollectionViewFlowLayout()
-        
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
-        
-        $0.collectionViewLayout = layout
-        $0.register(TitleCell.self)
-        $0.translatesAutoresizingMaskIntoConstraints = false
+                                            let layout = UICollectionViewFlowLayout()
+                                            
+                                            layout.sectionInset = UIEdgeInsets(top: 10,
+                                                                               left: 10,
+                                                                               bottom: 20,
+                                                                               right: 10)
+                                            
+                                            layout.minimumLineSpacing = 20
+                                            layout.minimumInteritemSpacing = 0
+                                            
+                                            $0.collectionViewLayout = layout
+                                            $0.registerNib(MatchCell.self)
+                                            $0.translatesAutoresizingMaskIntoConstraints = false
     }
     
     let activityIndicator = UIActivityIndicatorView(style: .gray)
@@ -40,7 +51,7 @@ class MatchesViewController: UIViewController, UICollectionViewDelegateFlowLayou
         $0.attributedTitle = NSAttributedString(string: "Pull to refresh")
     }
     
-    var dataSource: RxCollectionViewSectionedAnimatedDataSource<AnimatableSectionModel<String, Match>>!
+    var dataSource: RxCollectionViewSectionedAnimatedDataSource<AnimatableSectionModel<String, MatchesRow>>!
     
     init(with viewModel: MatchesViewModel) {
         self.viewModel = viewModel
@@ -83,7 +94,7 @@ class MatchesViewController: UIViewController, UICollectionViewDelegateFlowLayou
     private func bindViewModel() {
         collectionView.rx.setDelegate(self)
             .disposed(by: disposeBag)
-
+        
         refreshControl.rx.controlEvent(.valueChanged)
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else { return }
@@ -94,79 +105,88 @@ class MatchesViewController: UIViewController, UICollectionViewDelegateFlowLayou
         collectionView.rx.itemSelected
             .subscribe(onNext: { [weak self] indexPath in
                 guard let self = self else { return }
-                let item = self.dataSource[indexPath]
-                self.actions.onNext(.matchSelected(item))
+                let row = self.dataSource[indexPath]
+                self.actions.onNext(.matchIdSelected(row.title))
             })
             .disposed(by: disposeBag)
-
+        
         let states = viewModel.transform(input: actions).publish()
-
+        
         states.capture(case: MatchesState.pages)
             .asDriverIgnoreError()
-            .map { $0.map(self.createAnimatableSection) }
-            .do(onNext: { [weak self] _ in
+            .map { [self.createAnimatableSection($0)] }
+            .do(onNext: { [weak self] rows in
                 self?.refreshControl.endRefreshing()
             })
             .drive(collectionView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
-
+        
         states.capture(case: MatchesState.loading).toVoid()
-        .asDriverIgnoreError()
-        .drive(onNext: { [weak self] in
-            self?.activityIndicator.startAnimating()
-        }).disposed(by: disposeBag)
-
+            .asDriverIgnoreError()
+            .drive(onNext: { [weak self] in
+                self?.activityIndicator.startAnimating()
+            }).disposed(by: disposeBag)
+        
         states.exclude(case: MatchesState.loading)
             .toVoid()
             .asDriverIgnoreError()
             .drive(onNext: { [weak self] in
                 self?.activityIndicator.stopAnimating()
             }).disposed(by: disposeBag)
-
+        
         states.connect()
             .disposed(by: disposeBag)
     }
     
     private func configureDatasource() {
         dataSource = RxCollectionViewSectionedAnimatedDataSource(
-            configureCell: { (dataSource, collectionView, indexPath, item) -> UICollectionViewCell in
-                self.configureCell(item: item, indexPath: indexPath, from: collectionView)
-            }
-        )
+            configureCell: { (_, collectionView, indexPath, row) -> UICollectionViewCell in
+                self.configureCell(row: row,
+                                   indexPath: indexPath,
+                                   from: collectionView)
+        })
     }
     
     func applyTheme() {
-        view.backgroundColor = .white
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .color(forPalette: .grey100)
         collectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: collectionView.frame.width,
-               height: 60)
+        let cellWidth = collectionView.frame.width / 2 - 20
+        let cellHeight = cellWidth * 1.75
+        
+        return CGSize(width: cellWidth,
+                      height: cellHeight)
     }
     
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        referenceSizeForHeaderInSection section: Int) -> CGSize {
-        CGSize(width: collectionView.frame.width,
-               height: 55)
-    }
-    
-    private func createAnimatableSection(_ page: MatchesPage)-> AnimatableSectionModel<String, Match> {
-        return AnimatableSectionModel(model: "Test",
-                                      items: page.items)
+    private func createAnimatableSection(_ rows: [MatchesRow])-> AnimatableSectionModel<String, MatchesRow> {
+        return AnimatableSectionModel(model: "",
+                                      items: rows)
     }
 }
 
 extension MatchesViewController {
-    func configureCell(item: Match,
+    func configureCell(row: MatchesRow,
                        indexPath: IndexPath,
                        from collectionView: UICollectionView) -> UICollectionViewCell {
-        let cell: TitleCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.title = item.userName
+        let cell: MatchCell = collectionView.dequeueReusableCell(for: indexPath)
+        
+        if let mediumPhotoPathUrl = row.imageURL {
+            cell.imageView.downloadImage(with: mediumPhotoPathUrl,
+                                         completionHandler: nil)
+        }
+        
+        cell.titleLabel.text = row.title
+        cell.subtitleLabel.text = row.ageLocationSubtitle
+        cell.bottomSubtitleLabel.text = row.matchPercentage
+        
+        cell.isActiveIndicatorView.isHidden = !row.isOnline
+        
+        cell.applyTheme()
+        
         return cell
     }
 }

@@ -16,10 +16,11 @@ class MatchesRoutingListener: ModuleEventsListener {
     
     func listenEvents(from module: AnyEventsProducerModule,
                       events: Observable<MatchesEvents>) -> Bool {
-        events.capture(case: MatchesEvents.matchSelected)
+        events.capture(case: MatchesEvents.matchIdSelected)
             .toRoutableObservable()
-            .subscribe(onNext: { match in
-                print("[DEBUG] - MatchID \(match.userId) selected")
+            .subscribe(onNext: { matchId in
+                /// In the future it should call separate module that's going to be responsible for fetching match with provided id and presenting details
+                print("[DEBUG] - MatchID \(matchId) selected")
             })
             .disposed(by: module.disposeBag)
         
