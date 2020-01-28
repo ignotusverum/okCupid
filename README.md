@@ -1,4 +1,4 @@
-# okCubid code-challenge
+# okCupid code-challenge
 
 ## Installation
 
