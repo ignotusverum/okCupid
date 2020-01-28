@@ -122,6 +122,27 @@ class MatchesViewController: UIViewController, UICollectionViewDelegateFlowLayou
             .drive(collectionView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
         
+        states.capture(case: MatchesState.error)
+            .asDriverIgnoreError()
+            .drive(onNext: { [weak self] (error, _) in
+                guard let self = self else { return }
+                
+                let alert = UIAlertController(title: "Whoops",
+                                              message: "Something went wrong, please try again.",
+                                              preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Reload",
+                                              style: UIAlertAction.Style.default,
+                                              handler: { _ in
+                                                self.actions.onNext(.reload)
+                }))
+                
+                self.present(alert,
+                             animated: true,
+                             completion: nil)
+            })
+            .disposed(by: disposeBag)
+        
         states.capture(case: MatchesState.loading).toVoid()
             .asDriverIgnoreError()
             .drive(onNext: { [weak self] in

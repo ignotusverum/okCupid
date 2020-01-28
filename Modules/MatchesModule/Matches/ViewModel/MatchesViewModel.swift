@@ -32,24 +32,27 @@ class MatchesViewModel: MatchesViewModelProtocol {
     
     func transform(input: Observable<MatchesUIAction>,
                    scheduler: ImmediateSchedulerType) -> Observable<MatchesState> {
-        Observable.feedbackLoop(initialState: MatchesState.loading(whileInState: nil),
-                                scheduler: scheduler,
-                                reduce: { (state, action) -> MatchesState in
-                                    switch action {
-                                    case let .ui(action): return .reduce(state, action: action)
-                                    case let .model(action): return .reduce(state, model: action)
-                                    }
+        let errors = PublishSubject<Error>()
+        return Observable.feedbackLoop(initialState: MatchesState.loading(whileInState: nil),
+                                       scheduler: scheduler,
+                                       reduce: { (state, action) -> MatchesState in
+                                        switch action {
+                                        case let .ui(action): return .reduce(state, action: action)
+                                        case let .model(action): return .reduce(state, model: action)
+                                        }
         }, feedback: { _ in input.map(MatchesActions.ui) },
            weakify(self,
                    default: .empty()) { (me: MatchesViewModel, state) in
-                    state.capture(case: MatchesState.loading).toVoid()
+                    Observable.merge(state.capture(case: MatchesState.loading).toVoid()
                         .compactFlatMapLatest { _ in
                             me.model
                                 .fetchMatches()
                                 .asObservable()
+                                .catchError(sendTo: errors)
                                 .map(MatchesModelAction.loaded)
-                    }
-                    .map(MatchesActions.model)
+                        },
+                                     errors.map(MatchesModelAction.error))
+                        .map(MatchesActions.model)
         })
             .sendSideEffects({ state in
                 input.capture(case: MatchesUIAction.matchIdSelected)

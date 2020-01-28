@@ -16,6 +16,7 @@ enum MatchesUIAction: EventProtocol {
 
 enum MatchesModelAction: EventProtocol {
     case loaded(_ sections: MatchesPage)
+    case error(_ error: Error)
 }
 
 enum MatchesActions: EventProtocol {
